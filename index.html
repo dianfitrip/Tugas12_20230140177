@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Form Biodata</title>
+  <script src="script.js" defer></script>
+  <style>
+    body {
+      background-color: #ffeef8;
+      font-family: 'Segoe UI', sans-serif;
+      color: #4a235a;
+      margin: 40px;
+    }
+
+    .container {
+      max-width: 420px;
+      background-color: #fff0f6;
+      border-radius: 15px;
+      box-shadow: 0 5px 12px rgba(200, 100, 200, 0.2);
+      padding: 25px;
+      margin: auto;
+    }
+
+    h2 {
+      text-align: center;
+      color: #ba55d3;
+    }
+
+    label {
+      display: block;
+      margin-top: 12px;
+    }
+
+    input, select {
+      width: 100%;
+      padding: 10px;
+      margin-top: 6px;
+      border-radius: 8px;
+      border: 1px solid #f5c6e7;
+      background-color: #fff8fc;
+      color: #4a235a;
+      font-size: 14px;
+    }
+
+    input:focus, select:focus {
+      outline: none;
+      border-color: #ba55d3;
+      box-shadow: 0 0 5px #eba8da;
+    }
+
+    input:-webkit-autofill {
+      -webkit-box-shadow: 0 0 0 30px #fff8fc inset !important;
+      -webkit-text-fill-color: #4a235a !important;
+    }
+
+    button {
+      margin-top: 20px;
+      width: 100%;
+      padding: 10px;
+      background-color: #ff69b4;
+      color: white;
+      border: none;
+      border-radius: 10px;
+      font-weight: bold;
+      font-size: 14px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #ff85c1;
+    }
+
+    #hasil {
+      margin-top: 20px;
+      padding: 15px;
+      background-color: #fde0f0;
+      border-radius: 10px;
+    }
+
+    #hasil p {
+      margin: 5px 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Form Biodata</h2>
+
+    <label for="nama">Nama:</label>
+    <input type="text" id="nama" autocomplete="off">
+
+    <label for="nim">NIM:</label>
+    <input type="text" id="nim" autocomplete="off">
+
+    <label for="jurusan">Jurusan:</label>
+    <select id="jurusan">
+      <option value="Farmasi">Farmasi</option>
+      <option value="Keperawatan">Keperawatan</option>
+      <option value="Psikologi">Psikologi</option>
+    </select>
+
+    <label for="tanggal">Tanggal Lahir:</label>
+    <input type="date" id="tanggal">
+
+    <label for="maincco">Apakah Anda main CCO?</label>
+    <select id="maincco">
+      <option value="Iya">Iya</option>
+      <option value="Tidak">Tidak</option>
+    </select>
+
+    <button onclick="tampilkanData()">Tampilkan</button>
+
+    <div id="hasil"></div>
+  </div>
+</body>
+</html>
